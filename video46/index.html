@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 30vw;
+            background-color: rgb(186, 24, 113);
+        }
+
+        .box {
+            height: 34px;
+            width: 45px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode;*/
+            animation: harry 3s cubic-bezier(0.47, 0.47, 0, 0.97) 1s infinite alternate-reverse forwards;
+        }
+
+        @keyframes harry {
+            from {
+                background-color: rgb(63, 240, 158);
+            }
+
+            to {
+                background-color: rgb(241, 231, 125);
+                transform: translateX(1000px) translateY(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+
+</html>

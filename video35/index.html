@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more on css selectors</title>
+    <style>
+        /*.box:first-child{
+    background-color: blue;
+  } */
+
+        /*.boxes::first-line{
+    color: yellow;
+}*/
+
+        .boxes * {
+            color: aqua;
+            border: 2px solid black;
+            margin: 6px;
+        }
+
+        [data-color="primary"] {
+            padding-bottom: 45px;
+        }
+
+        .box:nth-child(even) {
+            background-color: blue;
+        }
+
+        /*.box:nth-last-child(even){
+    background-color: blue;
+ }*/
+
+        .boxes:before {
+            content: "mera naam toh pta hi hoga";
+            color: green;
+            background-color: aqua;
+        }
+
+        ::selection {
+            color: goldenrod;
+            background-color: red;
+        }
+
+        input::placeholder {
+            color: red;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type your text  name here">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms - lets learn it</title>
+</head>
+
+<body>
+    <h1>form to apply for rrb je(it)</h1>
+    <form action="post" method="post">
+        <div>
+            <label for="username">enter your username</label>
+            <input type="text" id="username" name="enter your username" placeholder="Enter Username">
+        </div>
+        <div>
+            <label for="password">enter your password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+        <div>
+            <label for="">I hereby declare that information provided by me is corect</label>
+            <input type="checkbox" name="agree" value="yes"> I agree
+        </div>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <textarea name="comments" id="comment" rows="4" cols="50" placeholder="Enter comments here..."></textarea>
+        </div>
+        <div>
+            <select name="city">
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Indore">Indore</option>
+                <option value="Banglore">Banglore</option>
+            </select>
+        </div>
+        <div>
+            <label for="pincode">enter your pincode</label>
+            <input type="text" id="pincode">
+        </div>
+        <div>
+            <input type="file" name="fileupload">
+            <input type="range" name="volume" min="0" max="100">
+            <input type="number" name="quantity" min="1" max="100">
+        </div>
+        <div>
+            <label for="">enter your email </label>
+            <input type="email" name="email" placeholder="Enter Email">
+        </div>
+
+        <div>
+            <label for="">search something?</label>
+            <input type="search" name="query" placeholder="Search">
+        </div>
+        <div>
+            <input type="date" name="birthdate">
+        </div>
+
+    </form>
+</body>
+
+</html>

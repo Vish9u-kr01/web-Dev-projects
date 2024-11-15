@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit and position</title>
+    <style>
+        .container{
+            height: 60vh;
+            width: 80vw;
+            border: 2px solid black;
+            background-image: url(https://th.bing.com/th/id/OIP.3dgGiWzK7Rp9RX78dT1USgHaEK?rs=1&pid=ImgDetMain);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-clip: border-box;
+
+        }
+        img{
+            height: 320px;
+            width: 230px;
+           /* object-fit: cover;*/
+           /* object-fit: fill;*/
+           object-fit: contain;
+           object-position: top left ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://www.dicasdemulher.com.br/wp-content/uploads/2017/07/truques-para-fotos-e-videos.jpg" alt="">  -->
+    </div>
+</body>
+</html>
