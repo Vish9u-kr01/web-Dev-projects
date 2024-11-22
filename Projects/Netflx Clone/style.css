@@ -5,14 +5,33 @@
 }
 
 body {
+    background-color:black;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
+@media only screen and  (max-width:600px),(max-width:1024px) {
+        body {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .movie {
+            width: 100%;
+            max-width: 320px;
+            margin: 10px 0;
+            flex: 1 0 45%; 
+        }
+    }
 
+    
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #141414;
+    background-color:black;
     padding: 20px;
     color: white;
 }
@@ -20,6 +39,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #e50914;
 }
 
 nav ul {
@@ -31,32 +51,51 @@ nav li {
     margin: 0 15px;
     cursor: pointer;
 }
+nav li:hover {
+    background-color: #333;
+}
 
 .banner {
-    background-image: url("");
+    background-image: url("https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg");
+    background-size: 900px;
+    background-color: #141414;
     height: 300px;
-    background-color: #555;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
 }
 
-.banner h1 {
-    font-size: 30px;
+.banner h1  {
+    font-weight: underline;
+    font-size: 40px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.banner h3{
+    padding: 10px;
+}
+.banner h4{
+    padding: 8px;
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #e50914;
     border: none;
     color: white;
     cursor: pointer;
 }
+.text{
+    padding: 5px 10px;
+    background-color: #333;
+    border: 1px solid black;
+}
+
 
 .content {
     padding: 20px;
+    color: aliceblue;
 }
 
 .movie-row {
@@ -65,6 +104,8 @@ nav li {
 }
 
 .movie {
+    flex: 1 0 21%; 
+    margin-bottom: 20px;
     min-width: 150px;
     height: 225px;
     background-color: #333;
@@ -73,4 +114,57 @@ nav li {
     color: white;
     text-align: center;
     line-height: 225px;
+    border-radius: 10%;
+}
+.movie1{
+   background-image: url("https://occ-0-3647-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV08j_6IdtOwMPV39S0jqAub7E2NfwSS0901SSXW6vuUWoXU41iJfo9i1PkMsd88oPeigxFTOCXM7LVsgkTWo6VM6llohGIF5KiB.jpg?r=680");
+  background-size:160px;
+  transform: scale(1,1);
+  transition: transform 0.5s ease-out; 
+}
+.movie1:hover {
+    transform: scale(0.8,0.8);
+}
+.movie2{
+    background-image: url("https://occ-0-3647-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcNvBtd573N-pv7dLNt2lib9LfGTv-gc8PRddMU50DMd2SEUzbEBobk0aPVDzPcwg6-5Us9k_HnIUvvLeNNKgj9s38DMLaJLx1qeFw6-T_3dCYRBvDPRavHTeWYQZ625fPOVCw.jpg?r=830");
+    background-size:160px;
+    transform: scale(1,1);
+    transition: transform 0.5s ease-out; 
+}
+.movie2:hover {
+    transform: scale(0.8,0.8);
+}
+.movie3{
+    background-image: url("https://occ-0-3647-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABT0zkn5cDQBdKryll-W8tDB2aGmk2gMrKrrLek1uz6P2y53EqQ7R1suc1jiB4piCsWPwzJwEJtPchx_uf_V2KFpaotwlHbhUf7lk.jpg?r=4e6");
+  background-size:160px;
+  transform: scale(1,1);
+  transition: transform 0.5s ease-out; 
+}
+.movie3:hover {
+    transform: scale(0.8,0.8);
+}
+.movie4{
+    background-image: url("https://occ-0-3647-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABR-OeORIMDtzIeXeHBbNYp1fefHOuIc7lazPT0HiuXyqW4BU_uK6KqMAYGZObOaZFNC2mWwvBbUPX103oRPI2Q_WNdhWkoo7JM1M.jpg?r=17c");
+  background-size:160px;
+  transform: scale(1,1);
+  transition: transform 0.5s ease-out; 
+}
+.movie4:hover {
+    transform: scale(0.8,0.8);
+}
+.movie5{
+    background-image: url("https://occ-0-3647-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABboY-WKzPGkJzriBMl5wrwwGhKJbx5VsmmxhAbeC3fvQshpQ_qvlF8ZsRD1FnB4UsNIp_v5BwjQ6huqaw0ZyVwqvsrEFJqPn6v-s.jpg?r=baa");
+  background-size:160px;
+  transform: scale(1,1);
+  transition: transform 0.5s ease-out; 
+}
+.movie5:hover { 
+    transform: scale(0.8,0.8);
+}
+
+
+
+footer{
+    background-color:black;
+    color: white;
 }
