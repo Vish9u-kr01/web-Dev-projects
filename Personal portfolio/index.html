@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+  <style>
+          * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+}
+
+@media only  screen and (orientation:portrait) {
+    body{
+        background-color: aqua;
+    }
+}
+/* Header Styles */
+header {
+    background: linear-gradient(135deg,#ff007a,#ff4d9a);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: aqua;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    background-color: #03DAC6;
+}
+
+/* Section Styles */
+section {
+    padding: 2em;
+    margin: 1em 0;
+}
+
+#about, #skills, #projects, #contact {
+    background: linear-gradient(135deg,#ff007a,#ff4d9a);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+h2 {
+    color: aqua;
+    margin-bottom: 0.5em;
+}
+
+ul {
+    list-style: square;
+}
+
+li {
+    padding: 0.5em 0;
+}
+
+/* Adding some padding to body */
+body {
+    padding: 1em;
+}
+
+
+  </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Vishnu, a second-year B.Tech IT student. I have a passion for web development and enjoy learning new technologies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>C++ (for DSA)</li>
+            <li>Frontend Development</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my recent projects:</p>
+        <ul>
+            <li>Personal Portfolio Website</li>
+            <li>Weather App</li>
+            <li>Simple To-Do List</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at:</p>
+        <p>Telephone : 9873201255</p>
+        <p>Email: <a href="mailto:vishnu1424@gmail.com">vishnu1424@gmail.com</a></p>
+    </section>
+
+</body>
+</html>
