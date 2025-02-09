@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Data Fetch Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #data-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #94e9fc;
+        }
+        .loading {
+            font-style: italic;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Data Fetch Example</h1>
+    <button id="fetchData">Fetch Data</button>
+    <div id="data-container">
+        <p class="loading">Click the button to fetch data...</p>
+    </div>
+
+    <script>
+        // Get references to the button and container
+        const button = document.getElementById('fetchData');
+        const dataContainer = document.getElementById('data-container');
+
+        // Event listener for the button
+        button.addEventListener('click', () => {
+            // Clear the container and show a loading message
+            dataContainer.innerHTML = '<p class="loading">Pls wait ! Loading data...</p>';
+
+            // Fetch data from a public API
+            fetch('https://fakestoreapi.com/products/1') // Example API
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json(); // Parse the JSON response
+                })
+                .then((data) => {
+                    // Display the fetched data in the container
+                    dataContainer.innerHTML = `
+                        <h2>${data.title}</h2>
+                        <p>${data.body}</p>
+                    `;
+                })
+                .catch((error) => {
+                    // Handle any errors that occur during the fetch
+                    dataContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
